@@ -2,8 +2,7 @@
 ## Cass Business School, London, 14 July 2014
 
 9:00  - 10:00 Opening keynote:  
-Montserrat Guillen and Leo Guelman: New trends in predictive modelling
-- the uplift models success story 
+Montserrat Guillen and Leo Guelman: New trends in predictive modelling - the uplift models success story 
 
 10:00 - 11:00 Session 1: Reserving (20 min. each)
 
@@ -84,28 +83,14 @@ R-package.
 
 
 ### Reserving by conditioning on markers of individual claims: a case study using historical simulation
-#### Els Godecharle and Katrien Antonio, KU Leuven
+#### Els Godecharle, KU Leuven
 
-To be able to fulfil future liabilities insurance companies set
-reserves for incurred claims which are not finalised at the moment of
-evaluation.  Traditional reserving methods compress large data sets
-with information on the development of individual claims into small
-sample designs, the so called run-off triangles.  As such, triangular
-reserving methods ignore detailed information on the policyholder, the
-claim and its development so far.   
 
-We introduce a new reserving method, called the stochastic RDC method,
-working on a micro-level data set containing detailed information on
-each individual claim.  The stochastic RDC method combines the idea of
-Rosenlund (2012) to predict the future development of outstanding
-liabilities, as one of the first methods, conditional upon a selection
-of 'claim markers' with the technique of historical simulation to
-obtain a predictive distribution of the reserve.    
+Our research explores the use of claim specific characteristics, so-called claim markers, for loss reserving with individual claims. Starting from the approach of Rosenlund (2012) we develop a stochastic Reserve by Detailed Conditioning ('RDC') method which is applicable to a micro-level data set with detailed information on individual claims. 
 
-We show the data structure the stochastic RDC method works with.  We
-implemented the stochastic RDC method in R and demonstrate its
-performance on a portfolio of general liability insurance policies for
-private individuals from a European insurance company.   
+We use historical simulation to construct the predictive distribution of the outstanding loss reserve by simulating payments of a claim, given its claim markers. We explore how to incorporate different types of claim specific information when simulating outstanding loss reserves, and evaluate the impact of the set of markers and their specification on the predictive distribution of the outstanding reserve.  
+
+The stochastic RDC method is implemented in R and the code is made available [online](http://www.econ.kuleuven.be/els.godecharle). We demonstrate the performance of the method on a portfolio of general liability insurance policies for private individuals from a European insurance company.
 
 ### Multivariate Regression Models for Reserving
 #### Brian Fannin, Redwoods Group
@@ -127,7 +112,7 @@ consistent with common R objects. This enables one to easily update
 information as part of routine studies, join to other data sources or
 examine particular subsets of reserving data.
  
-The Triangle object features basic visualization for exploratory
+The Triangle object features basic visualisation for exploratory
 analysis to aid the actuary in selecting model variables. The
 TriangleModel object stores information regarding a fit model. One may
 have more than one model for the same Triangle object. When
@@ -147,7 +132,7 @@ function, respectively.
 ## Lightning Talks
 
 ### Loss modelling with mixtures of Erlang distributions
-#### Katrien Antonio (KU Leuven, University of Amsterdam), Lan Gong, Andrei Badescu, Sheldon Lin (University of Toronto) and Roel Verbelen (KU Leuven)
+#### Roel Verbelen, KU Leuven
 
 Modelling data on claim sizes is crucial when pricing insurance products. Such loss models require on the one hand the flexibility of nonparametric density estimation techniques to describe the insurance losses and on the other hand the feasibility to analytically quantify the risk. Mixtures of Erlang distributions with a common scale are very versatile as they are dense in the space of positive continuous distributions (Tijms (1994, p. 163)). At the same time, it is possible to work analytically with this kind of distributions. Closed-form expressions of quantities of interest, such as the Value-at-Risk (VaR) and the Tail-Value-at-Risk (TVaR), can be derived as well as appealing closure properties (Lee and Lin (2010), Willmot and Lin (2011) and Klugman et al. (2012)). In particular, using these distributions in aggregate loss models leads to an analytical form of the corresponding aggregate loss distribution which avoids the need for simulations to evaluate the model. 
 
@@ -276,7 +261,7 @@ reporting and capital modelling.
 
 ### Estimating the duration of non-maturing liabilities in a user friendly Shiny web application
 #### Wim Konings, Reacfin 
-  
+
 One of the challenges in the risk management of non-maturing
 liabilities (e.g. saving accounts) is the estimation of the interest
 rate sensitivity (or duration) of these instruments. The aim of our
@@ -359,7 +344,6 @@ particular the `caret` package (Kuhn, 2008).
 
 ### Assessing Exploration Risk for Geothermal Wells
 #### Bernhard Kübler, Fraunhofer Institute for Industrial Mathematics 
-
 
 In the course of Germany’s 'energy transition' alternative power 
 sources are being extensively investigated. A particular form of these 
@@ -473,10 +457,10 @@ The general form, including chaining is:
 
 The presentation covers the essential syntax illustrated with examples.
 
-- Creating a data.table
-- Fast and friendly file reading with fread
+- Creating a `data.table`
+- Fast and friendly file reading with `fread`
 - Basic query syntax
-- Keys (setkey)
+- Keys (`setkey`)
 - Update by reference (:= and set*)
 - Ordered joins forwards, backwards, limited and nearest
 - Why R?
@@ -489,8 +473,9 @@ The presentation covers the essential syntax illustrated with examples.
 ### Going Bayesian with R - a non-Bayesian perspective 
 #### Arthur Charpentier, Université du Québec à Montréal, Professor
 
+
  Bayesian philosophy has a long history in actuarial science. Liu et
- al. (1996) claim that "Statistical methods with a Bayesian flavor
+ al. (1996) claim that "Statistical methods with a Bayesian flavour
  [...] have long been used in the insurance industry." If actuarial
  students discover Bayesian statistics with credibility, the Bayesian
  philosophy can be extremely powerful. Not only to quantify
@@ -499,4 +484,5 @@ The presentation covers the essential syntax illustrated with examples.
  possible when a lot of observations are available (and classical
  computations will be too complex). With the perspective of a muggle,
  I will try to explain the power of Bayesian techniques (usually seen
- as a magical black box by non-bayesians).
+ as a magical black box by non-Bayesians).
+ 
